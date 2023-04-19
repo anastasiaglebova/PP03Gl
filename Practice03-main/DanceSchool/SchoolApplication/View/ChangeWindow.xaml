@@ -1,0 +1,73 @@
+﻿<Window x:Class="SchoolApplication.View.ChangeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchoolApplication.View"
+        mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+       Title="Окно для внесения данных" Height="450" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+             <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.ColumnSpan="4">
+            <TextBlock Text="Внесение данные" 
+                       FontSize="32"
+                       HorizontalAlignment="Center" 
+                       Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Введите фамилию ученика" 
+                       FontSize="15" 
+                       HorizontalAlignment="Center"/>
+            <TextBox Text="{Binding StudentSurname}"
+                     Width="180" Height="20"
+                     FontSize="15"
+                     Margin="10" />
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="Введите имя ученика" 
+                       FontSize="15"
+                       HorizontalAlignment="Center"/>
+            <TextBox Text="{Binding StudentName}" 
+                     Width="180" Height="20"
+                     FontSize="15"
+                     Margin="10" />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="3">
+            <TextBlock Text="Введите возраст ученика"
+                       FontSize="15"
+                       HorizontalAlignment="Center"/>
+            <TextBox Text="{Binding StudentAge}"
+                     Width="180" Height="20"
+                     FontSize="15"
+                     Margin="10" />
+        </StackPanel>
+        <StackPanel Grid.Row="4">
+            <TextBlock Text="Введите название группы"
+                       FontSize="15"
+                       HorizontalAlignment="Center"/>
+            <TextBox Text="{Binding GroupName}"
+                     Width="180" Height="20"
+                     FontSize="15"
+                     Margin="10" />
+        </StackPanel>
+
+
+        <Button Height="50"
+                Width="380"
+                Name="BtnSend"
+                FontSize="20"
+                Click="BtnSend_Click"
+                Content="Внести данные" 
+                Grid.Row="7"/>
+    </Grid>
+</Window>
